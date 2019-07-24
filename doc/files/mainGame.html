@@ -1,0 +1,1178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../luadoc.css" type="text/css" />
+	<!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/-->
+</head>
+
+<body>
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+<div id="main">
+
+<div id="navigation">
+
+
+<h1>LuaDoc</h1>
+<ul>
+	
+	<li><a href="../index.html">Index</a></li>
+	
+</ul>
+
+
+<!-- Module list -->
+
+<h1>Modules</h1>
+<ul>
+
+	<li>
+		<a href="../modules/applicationManager.html">applicationManager</a>
+	</li>
+
+</ul>
+
+
+
+<!-- File list -->
+
+<h1>Files</h1>
+<ul>
+
+	<li>
+		<a href="../files/Channels.html">Channels.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/Chronometer.html">Chronometer.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/Label.html">Label.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/Object.html">Object.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/Region.html">Region.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/applicationManager.html">applicationManager.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/basicZapper.html">basicZapper.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/commandBar.html">commandBar.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/i18n.html">i18n.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/main.html">main.lua</a>
+	</li>
+
+	<li><strong>mainGame.lua</strong></li>
+	
+	<li>
+		<a href="../files/newInitScreen.html">newInitScreen.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/topBar.html">topBar.lua</a>
+	</li>
+
+</ul>
+
+
+
+
+
+
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+<h1>File <code>mainGame.lua</code></h1>
+
+
+
+
+
+
+
+<h2>Functions</h2>
+<table class="function_list">
+
+	<tr>
+	<td class="name" nowrap><a href="#backToFirstLevel">backToFirstLevel</a>&nbsp;()</td>
+	<td class="summary">return to the first level of the game </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#calculeteNumStars">calculeteNumStars</a>&nbsp;()</td>
+	<td class="summary">Calculate the nunber of star who the gamer win </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#changeLevel">changeLevel</a>&nbsp;()</td>
+	<td class="summary">change the level of the game </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#checkCannonBullet">checkCannonBullet</a>&nbsp;()</td>
+	<td class="summary">checks if the cannon bullet hit something </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#checkExplosion">checkExplosion</a>&nbsp;()</td>
+	<td class="summary">checks if the Explosion hits something </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#clearRegion">clearRegion</a>&nbsp;(region)</td>
+	<td class="summary">clear some region </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#collision">collision</a>&nbsp;(obj1, obj2)</td>
+	<td class="summary">checks colision between two objects </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#creatInvadersRegion">creatInvadersRegion</a>&nbsp;(tab)</td>
+	<td class="summary">create the region where the invaders are </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#createCannon">createCannon</a>&nbsp;()</td>
+	<td class="summary">create the Cannon Defensor </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#createExplosion">createExplosion</a>&nbsp;()</td>
+	<td class="summary">create an Explosion </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#createInvaders">createInvaders</a>&nbsp;()</td>
+	<td class="summary">create the Invaders </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#createTime">createTime</a>&nbsp;()</td>
+	<td class="summary">create a chronometer </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#createUFO">createUFO</a>&nbsp;()</td>
+	<td class="summary">create the Invaders UFO </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#drawBestTime">drawBestTime</a>&nbsp;()</td>
+	<td class="summary">Draw the best time in screen </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#drawCannon">drawCannon</a>&nbsp;()</td>
+	<td class="summary">draws Cannon Defensor </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#drawCongratulation">drawCongratulation</a>&nbsp;()</td>
+	<td class="summary">draws Victory Screen </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#drawExplosion">drawExplosion</a>&nbsp;()</td>
+	<td class="summary">draws Explosion </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#drawGameOver">drawGameOver</a>&nbsp;()</td>
+	<td class="summary">draws Game Over Screen </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#drawInvaders">drawInvaders</a>&nbsp;()</td>
+	<td class="summary">draws Invaders </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#drawOff">drawOff</a>&nbsp;()</td>
+	<td class="summary">Draw off objects </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#drawStars">drawStars</a>&nbsp;(numStars)</td>
+	<td class="summary">Draw 3 stars in the screen </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#drawStatus">drawStatus</a>&nbsp;()</td>
+	<td class="summary">draws Status on bar </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#drawWin">drawWin</a>&nbsp;()</td>
+	<td class="summary">draws Victory Screen </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#exitGame">exitGame</a>&nbsp;()</td>
+	<td class="summary">clear the memory and quits the game </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#key_handler">key_handler</a>&nbsp;(evt)</td>
+	<td class="summary">The handler of main screen </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#loadRecord">loadRecord</a>&nbsp;()</td>
+	<td class="summary">loads the records from a file </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#loadSettings">loadSettings</a>&nbsp;()</td>
+	<td class="summary">load de file of settings </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#moveBulletDown">moveBulletDown</a>&nbsp;(obj)</td>
+	<td class="summary">move some bullet down </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#moveBulletUp">moveBulletUp</a>&nbsp;(obj)</td>
+	<td class="summary">move some bullet up </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#moveCannonLeft">moveCannonLeft</a>&nbsp;()</td>
+	<td class="summary">move Cannon Defensor to left </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#moveCannonRight">moveCannonRight</a>&nbsp;()</td>
+	<td class="summary">move Cannon Defensor to right </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#moveInvaders">moveInvaders</a>&nbsp;()</td>
+	<td class="summary">move the invaders to left or right direction </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#moveInvadersDown">moveInvadersDown</a>&nbsp;()</td>
+	<td class="summary">move the invaders down when they collides with wall </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#moveUFO">moveUFO</a>&nbsp;()</td>
+	<td class="summary">move UFO through the screen </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#reset">reset</a>&nbsp;()</td>
+	<td class="summary">reset all variables </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#restartLevel">restartLevel</a>&nbsp;()</td>
+	<td class="summary">restart the current level of the game </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#run">run</a>&nbsp;()</td>
+	<td class="summary">Runs the game </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#saveRecord">saveRecord</a>&nbsp;()</td>
+	<td class="summary">saves the record in a file </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#saveSettings">saveSettings</a>&nbsp;()</td>
+	<td class="summary">Save settings </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#shot">shot</a>&nbsp;()</td>
+	<td class="summary">cannon shot </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#shotInv">shotInv</a>&nbsp;()</td>
+	<td class="summary">invaders shot </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#shotUFO">shotUFO</a>&nbsp;()</td>
+	<td class="summary">ufo shot </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#start">start</a>&nbsp;(level)</td>
+	<td class="summary">starts the application </td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+<br/>
+<br/>
+
+
+
+
+<h2><a name="functions"></a>Functions</h2>
+<dl class="function">
+
+
+
+<dt><a name="backToFirstLevel"></a><strong>backToFirstLevel</strong>&nbsp;()</dt>
+<dd>
+return to the first level of the game
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="calculeteNumStars"></a><strong>calculeteNumStars</strong>&nbsp;()</dt>
+<dd>
+Calculate the nunber of star who the gamer win
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="changeLevel"></a><strong>changeLevel</strong>&nbsp;()</dt>
+<dd>
+change the level of the game
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="checkCannonBullet"></a><strong>checkCannonBullet</strong>&nbsp;()</dt>
+<dd>
+checks if the cannon bullet hit something
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="checkExplosion"></a><strong>checkExplosion</strong>&nbsp;()</dt>
+<dd>
+checks if the Explosion hits something
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="clearRegion"></a><strong>clearRegion</strong>&nbsp;(region)</dt>
+<dd>
+clear some region
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  region: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="collision"></a><strong>collision</strong>&nbsp;(obj1, obj2)</dt>
+<dd>
+checks colision between two objects
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  obj1: 
+	</li>
+	
+	<li>
+	  obj2: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="creatInvadersRegion"></a><strong>creatInvadersRegion</strong>&nbsp;(tab)</dt>
+<dd>
+create the region where the invaders are
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  tab: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="createCannon"></a><strong>createCannon</strong>&nbsp;()</dt>
+<dd>
+create the Cannon Defensor
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="createExplosion"></a><strong>createExplosion</strong>&nbsp;()</dt>
+<dd>
+create an Explosion
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="createInvaders"></a><strong>createInvaders</strong>&nbsp;()</dt>
+<dd>
+create the Invaders
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="createTime"></a><strong>createTime</strong>&nbsp;()</dt>
+<dd>
+create a chronometer
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="createUFO"></a><strong>createUFO</strong>&nbsp;()</dt>
+<dd>
+create the Invaders UFO
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="drawBestTime"></a><strong>drawBestTime</strong>&nbsp;()</dt>
+<dd>
+Draw the best time in screen
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="drawCannon"></a><strong>drawCannon</strong>&nbsp;()</dt>
+<dd>
+draws Cannon Defensor
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="drawCongratulation"></a><strong>drawCongratulation</strong>&nbsp;()</dt>
+<dd>
+draws Victory Screen
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="drawExplosion"></a><strong>drawExplosion</strong>&nbsp;()</dt>
+<dd>
+draws Explosion
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="drawGameOver"></a><strong>drawGameOver</strong>&nbsp;()</dt>
+<dd>
+draws Game Over Screen
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="drawInvaders"></a><strong>drawInvaders</strong>&nbsp;()</dt>
+<dd>
+draws Invaders
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="drawOff"></a><strong>drawOff</strong>&nbsp;()</dt>
+<dd>
+Draw off objects
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="drawStars"></a><strong>drawStars</strong>&nbsp;(numStars)</dt>
+<dd>
+Draw 3 stars in the screen
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  numStars: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="drawStatus"></a><strong>drawStatus</strong>&nbsp;()</dt>
+<dd>
+draws Status on bar
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="drawWin"></a><strong>drawWin</strong>&nbsp;()</dt>
+<dd>
+draws Victory Screen
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="exitGame"></a><strong>exitGame</strong>&nbsp;()</dt>
+<dd>
+clear the memory and quits the game
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="key_handler"></a><strong>key_handler</strong>&nbsp;(evt)</dt>
+<dd>
+The handler of main screen
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  evt: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="loadRecord"></a><strong>loadRecord</strong>&nbsp;()</dt>
+<dd>
+loads the records from a file
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="loadSettings"></a><strong>loadSettings</strong>&nbsp;()</dt>
+<dd>
+load de file of settings
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="moveBulletDown"></a><strong>moveBulletDown</strong>&nbsp;(obj)</dt>
+<dd>
+move some bullet down
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  obj: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="moveBulletUp"></a><strong>moveBulletUp</strong>&nbsp;(obj)</dt>
+<dd>
+move some bullet up
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  obj: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="moveCannonLeft"></a><strong>moveCannonLeft</strong>&nbsp;()</dt>
+<dd>
+move Cannon Defensor to left
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="moveCannonRight"></a><strong>moveCannonRight</strong>&nbsp;()</dt>
+<dd>
+move Cannon Defensor to right
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="moveInvaders"></a><strong>moveInvaders</strong>&nbsp;()</dt>
+<dd>
+move the invaders to left or right direction
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="moveInvadersDown"></a><strong>moveInvadersDown</strong>&nbsp;()</dt>
+<dd>
+move the invaders down when they collides with wall
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="moveUFO"></a><strong>moveUFO</strong>&nbsp;()</dt>
+<dd>
+move UFO through the screen
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="reset"></a><strong>reset</strong>&nbsp;()</dt>
+<dd>
+reset all variables
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="restartLevel"></a><strong>restartLevel</strong>&nbsp;()</dt>
+<dd>
+restart the current level of the game
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="run"></a><strong>run</strong>&nbsp;()</dt>
+<dd>
+Runs the game
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="saveRecord"></a><strong>saveRecord</strong>&nbsp;()</dt>
+<dd>
+saves the record in a file
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="saveSettings"></a><strong>saveSettings</strong>&nbsp;()</dt>
+<dd>
+Save settings
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="shot"></a><strong>shot</strong>&nbsp;()</dt>
+<dd>
+cannon shot
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="shotInv"></a><strong>shotInv</strong>&nbsp;()</dt>
+<dd>
+invaders shot
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="shotUFO"></a><strong>shotUFO</strong>&nbsp;()</dt>
+<dd>
+ufo shot
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="start"></a><strong>start</strong>&nbsp;(level)</dt>
+<dd>
+starts the application
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  level: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+</dl>
+
+
+
+
+
+
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+	<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->	
+</body>
+</html>
